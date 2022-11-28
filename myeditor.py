@@ -3,9 +3,9 @@ from createQuote_gen_img import createAssets
 import random
 import os 
 
-AUDIOCLIPS = ["C:/Users/Logeshwaran K/OneDrive/Desktop/youtubeBot/finalDraft/assets/bgm.mpeg","C:/Users/Logeshwaran K/OneDrive/Desktop/youtubeBot/finalDraft/assets/bgm2.mpeg"]
-BGVID =["C:/Users/Logeshwaran K/OneDrive/Desktop/youtubeBot/finalDraft/assets/bgVid.mp4","C:/Users/Logeshwaran K/OneDrive/Desktop/youtubeBot/finalDraft/assets/bgVid2.mp4"]
-INTROCLIPS =["C:/Users/Logeshwaran K/OneDrive/Desktop/youtubeBot/finalDraft/assets/vid1.mp4","C:/Users/Logeshwaran K/OneDrive/Desktop/youtubeBot/finalDraft/assets/intro.mp4"]
+AUDIOCLIPS = ["./assets/bgm.mpeg","./assets/bgm2.mpeg"]
+BGVID =["./assets/bgVid.mp4","./assets/bgVid2.mp4"]
+INTROCLIPS =["/assets/vid1.mp4","/assets/intro.mp4"]
 
 audio_loc = random.choice(AUDIOCLIPS)
 bgv_loc = random.choice(BGVID)
@@ -25,7 +25,7 @@ locations = {"quote":["quote1.png","quote2.png","quote3.png",],"charName":["char
 for i in range(3):
     
     #previous
-    # major_clip = VideoFileClip("C:/Users/Logeshwaran K/OneDrive/Desktop/youtubeBot/finalDraft/assets/bgVid.mp4").subclip(0,6)
+    
 
     major_clip = VideoFileClip(bgv_loc).subclip(0,6)
     quote = ImageClip(f"{locations['quote'][i]}").set_duration(6)
@@ -37,7 +37,7 @@ for i in range(3):
 
 
 #previous
-# intro = VideoFileClip("C:/Users/Logeshwaran K/OneDrive/Desktop/youtubeBot/finalDraft/assets/vid1.mp4").subclip(0,2).resize((740,1000))
+
 
 if intro_loc == INTROCLIPS[0]:
     intro = VideoFileClip(intro_loc).subclip(0,2).resize((740,1000))
